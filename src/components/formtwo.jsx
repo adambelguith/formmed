@@ -22,9 +22,10 @@ const FormTwo = ({ onSubmit }) => {
                 className="w-2/5 h-6 rounded-md"
                 {...register('qualificationLevel', {
                   required: 'entrer votre sexe obligatoire',
+                  validate: (value) => value !== '' || 'Invalid qualificationLevel'
                 })}
                 >
-                <option className='classstyle' disabled selected>Select étude</option>
+                <option className='classstyle' value="" disabled selected>Select étude</option>
                 <option value="Lycée">Lycée</option>
                 <option value="Faculté">Faculté</option>
               </select>
@@ -56,13 +57,12 @@ const FormTwo = ({ onSubmit }) => {
               <label className='text-white flex justify-start ml-4 mt-4'>Etat civil :</label>
                 <select
                 className="w-2/5 h-6 rounded-md"
-                // id="isPaid"
-                // defaultValue={order.isPaid} 
                 {...register('maritalStatus', {
                   required: 'entrer votre sexe obligatoire',
+                  validate: (value) => value !== '' || 'Invalid maritalStatus'
                 })}
                 >
-                  <option className='classstyle' >C ou M ou D</option>
+                  <option className='classstyle' value='' disabled selected>C ou M ou D</option>
                 <option value="C">C</option>
                 <option value="M">M</option>
                 <option value="D">D</option>
@@ -94,7 +94,7 @@ const FormTwo = ({ onSubmit }) => {
                 </div>
 
             </div>
-            <button type="submit" className='absolute flex end-4 top-[115%]  bg-[#0a0a5e] h-12 w-24 rounded-lg' > <span className='text-white ml-6 mt-[9px]' >Suivant</span></button>
+            <button type="submit" className='absolute flex end-4 top-[105%]  bg-[#0a0a5e] h-12 w-24 rounded-lg' > <span className='text-white ml-6 mt-[9px]' >Suivant</span></button>
         </form>
       
     </div>

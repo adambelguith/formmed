@@ -58,25 +58,24 @@ const FormUser = ({ onSubmit }) => {
 
                   <label className='text-white flex justify-start ml-4 '>Sexe :</label>
                   <select
-                  className="w-2/5 h-6 rounded-md mb-6"
-                  // id="isPaid"
-                  // defaultValue={order.isPaid} 
+                  className="w-2/5 h-6 rounded-md"
                   {...register('gender', {
                     required: 'entrer votre sexe obligatoire',
+                    validate: (value) => value !== '' || 'Invalid gender',
                   })}
                   >
-                    <option className='classstyle' disabled selected>M ou F</option>
+                  <option className='classstyle' value="" disabled selected>M ou F</option>
                   <option value="M">M</option>
                   <option value="F">F</option>
                 </select>
                 {errors.gender && (
                   <div className="text-[#f30808]">entrer votre sexe obligatoire</div>
                 )}
-                
+                <div className='mb-6'></div>
 
                   
               </div>
-              <button type="submit" className='absolute flex end-4 top-[115%]  bg-[#0a0a5e] h-12 w-24 rounded-lg' > <span className='text-white ml-6 mt-[9px]' >Suivant</span></button>
+              <button type="submit" className='absolute flex end-4 top-[105%]  bg-[#0a0a5e] h-12 w-24 rounded-lg' > <span className='text-white ml-6 mt-[9px]' >Suivant</span></button>
           </form>
         
       </div>

@@ -22,7 +22,7 @@ function App() {
     console.log(combinedData)
     // Make a POST request using Axios
     try {
-      const response = await axios.post('your-api-endpoint', combinedData);
+      const response = await axios.post('/api/patients/create', combinedData);
       console.log('Server response:', response.data);
     } catch (error) {
       console.error('Error submitting data:', error);

@@ -1,5 +1,5 @@
 #Captures 
-![capture 1](/public/capture1.png)
+![capture 1](/public/Capture1.PNG)
 ![/public/capture2.png]
 # Getting Started with Create React App
 

@@ -1,8 +1,22 @@
 .App {
   text-align: center;
+  background-color: rgb(244, 244, 244);
   background: linear-gradient(90deg, rgba(109,11,121,1) 0%, rgba(176,52,166,1) 35%, rgba(0,212,255,1) 100%);
 }
 .color{
+  background-color: #7f7575;
+}
+.etapesdiv{
   background-color: #0a0a5e;
+  border-radius: 0 25% 25% 0;
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+.etapesdivnul{
+  background-color: #f7ebdb94;
+  /* border: 3px solid #0a0a5e; */
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
 }
 
+.classstyle{
+  color:#7f7575 ;
+}

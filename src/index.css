@@ -7,9 +7,11 @@ body {
   font-family: "Times New Roman", Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(206, 149, 149);
 }
 
-input {
+input,
+textarea {
   @apply rounded border p-2  outline-none ring-indigo-300  focus:ring my-2;
 }
 

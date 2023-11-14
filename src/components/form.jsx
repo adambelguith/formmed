@@ -1,6 +1,5 @@
-import React,{useState} from 'react'
+import React,{useState, memo } from 'react'
 import { useForm } from "react-hook-form"
-import "react-datepicker/dist/react-datepicker.css";
 import '../App.css'
 
 
@@ -13,43 +12,60 @@ const FormUser = ({ onSubmit }) => {
       <div className='flex flex-col w-8/12'>
 
         <div className='flex flex-row justify-center mb-8'>
-          <div className='etapesdiv h-24 w-24 relative '> <h1 className='mt-8 ml-4 text-white text-xl'>etape1</h1></div>
-          <div className='etapesdivnul h-24 w-24 relative'><h1 className='mt-8 ml-4 text-[#151516c4] text-xl'>etape 2</h1></div>
+          <div className='etapesdiv h-24 w-24 relative '> <h1 className='mt-8 ml-8 text-white text-xl'>etape1</h1></div>
+          <div className='etapesdivnul h-24 w-24 relative'><h1 className='mt-8 ml-8 text-[#151516c4] text-xl'>etape 2</h1></div>
         </div>
           <form onSubmit={handleSubmit(onSubmit)} className='w-full  bg-[#ffc881] bg-opacity-40 backdrop-blur-lg backdrop-filter backdrop-saturate-150 rounded-2xl'>
-              <h1 className='text-2xl text-black'>Form to test input</h1>
-              <div className='ml-6 w-4/5 flex justify-center flex-col'>
-                  <label className='text-black flex justify-start ml-4 '>Prenom :</label>
-                  <input {...register("firstName",{required:'entrer votre Prenom obligatoire'})}/>
+              <div className='ml-6 w-4/5 flex  flex-col'>
+                  <label className='text-white flex justify-start ml-4 mt-6 '>Prénom :</label>
+                  <input 
+                    placeholder='Prénom'
+                    {...register("firstName",{required:'entrer votre Prenom obligatoire'})}/>
                   {errors.firstName && (
-                    <div className="text-[#f30808]">entrer votre Prenom obligatoire</div>
+                    <div className="text-[#f30808]">entrer votre Prénom obligatoire</div>
                   )}
-                  <label className='text-black flex justify-start ml-4 '>Nom :</label>
-                  <input {...register("lastName",{required:'entrer votre Nom obligatoire'})} />
+                  <label className='text-white flex justify-start ml-4 '>Nom :</label>
+                  <input 
+                  placeholder='votre nom'
+                  {...register("lastName",{required:'entrer votre Nom obligatoire'})} />
                   {errors.lastName && (
                     <div className="text-[#f30808]">entrer votre nom obligatoire</div>
                   )}
-                  <label className='text-black flex justify-start ml-4 '>Date de naissance  :
-   
-                  <div className='mb-6 w-2/5'>
-                  <input type='date' {...register("dateOfBirth",{required:'entrer votre Date de naissance obligatoire'})} />
+                  <div className='md:ml-6 w-4/5 flex flex-col md:flex-row'>
+                  <label className='text-white ml-4 whitespace-nowrap'>Date de naissance  : </label>
+                    
+                  <div className='flex flex-col'>
+                  <input type='date' {...register("dateOfBirth",{required:'entrer votre Date de naissance obligatoire'})} className='text-black md:ml-6' />
                   {errors.dateOfBirth && (
                     <div className="text-[#f30808] whitespace-nowrap">entrer votre Date de naissance obligatoire</div>
                   )}
                   </div>
-                  </label>
+                 
+                  </div>
+                  <div className='flex flex-row md:mt-8 '>
+                <label className='text-white flex justify-start ml-4 mt-4 '>Age:</label>
+                <input
+                 type="number" 
+                 defaultValue={"18"}
+                 className='w-16 ml-4'
+                {...register("age",{required:'entrez obligatoire'})} />
+                {errors.age && (
+                  <div className="text-[#f30808] ml-6">entrez obligatoire</div>
+                )}
+                </div>
+                  
                   {/* <input type="number" {...register("age")} /> */}
 
-                  <label className='text-black flex justify-start ml-4 '>Sexe :</label>
+                  <label className='text-white flex justify-start ml-4 '>Sexe :</label>
                   <select
-                  className="w-2/5 h-6 rounded-md"
+                  className="w-2/5 h-6 rounded-md mb-6"
                   // id="isPaid"
                   // defaultValue={order.isPaid} 
                   {...register('gender', {
                     required: 'entrer votre sexe obligatoire',
                   })}
                   >
-                    <option className='classstyle' ><span className='text-[#7f7575] text-sm'>Votre sexe</span></option>
+                    <option className='classstyle' disabled selected>M ou F</option>
                   <option value="M">M</option>
                   <option value="F">F</option>
                 </select>
@@ -58,8 +74,9 @@ const FormUser = ({ onSubmit }) => {
                 )}
                 
 
-                  <button type="submit" > Envoyer </button>
+                  
               </div>
+              <button type="submit" className='absolute flex end-4 top-[115%]  bg-[#0a0a5e] h-12 w-24 rounded-lg' > <span className='text-white ml-6 mt-[9px]' >Suivant</span></button>
           </form>
         
       </div>
@@ -67,4 +84,4 @@ const FormUser = ({ onSubmit }) => {
   )
 }
 
-export default FormUser
+export default memo(FormUser);

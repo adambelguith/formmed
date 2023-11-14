@@ -1,6 +1,6 @@
 #Captures 
 ![capture 1](/public/Capture1.PNG)
-![/public/capture2.png]
+![capture 2](/public/Capture2.PNG)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

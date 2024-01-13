@@ -63,7 +63,9 @@
     "GR": "int",
     "RG": "int",
     "GB": "int",
-    "RGT": "int"
+    "RGT": "int",
+    "VGM": "int",
+    "Trouanionique": "int"
 
   }
 }

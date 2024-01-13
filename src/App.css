@@ -6,15 +6,29 @@
 .color{
   background-color: #e69d31;
 }
+.etapevalid{
+  background-color: #5AFC21;
+  border-radius: 33.5px/29.5px;
+  box-shadow: 5px 4px 4px #00000040;
+  height: 59px;
+  position: relative;
+  width: 67px;
+}
 .etapesdiv{
-  background-color: #0a0a5e;
-  border-radius: 0 25% 25% 0;
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  background-color: #1e71ee;
+  border-radius: 33.5px/29.5px;
+  box-shadow: 5px 4px 4px #00000040;
+  height: 59px;
+  position: relative;
+  width: 67px;
 }
 .etapesdivnul{
-  background-color: #f7ebdb94;
-  /* border: 3px solid #0a0a5e; */
-  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  background-color: #ffffff;
+  border-radius: 33.5px/29.5px;
+  box-shadow: 5px 4px 4px #00000040;
+  height: 59px;
+  position: relative;
+  width: 67px;
 }
 
 .classstyle{

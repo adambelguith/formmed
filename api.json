@@ -1,0 +1,69 @@
+{
+    "form1": {
+        "firstName": "string",
+        "lastName": "string",
+        "dateOfBirth": "2024-01-05",
+        "age": 0,
+        "qualificationLevel": "string",
+        "gender": "string",
+        "occupation": "string",
+        "maritalStatus": "string"
+      },
+      "form2": {
+        "antecedentPersonnel": [{
+           "ageantecedents": "string", 
+           "autrepreciser":"string",
+           "chirurgicaux":"string", 
+           "obseretricaux":"string", 
+           "troublestrutural":"string" }],
+        "familialantecedent": "string"
+      },
+      "form3": {
+        "question1": "string",
+        "question2": "string",
+        "question3": "string",
+        "question4": "string",
+        "question5": "string",
+        "question6": "string",
+        "question7": "string",
+        "question8": "string",
+        "question9": "string",
+        "question10": "string",
+        "question11": "string",
+        "question12": "string",
+        "question13": "string",
+        "question14": "string",
+        "question15": "string",
+        "question16": "string",
+        "question17": "string",
+        "question18": "string",
+        "question19": "string",
+        "question20": "string",
+        "question21": "string",
+        "question22": "string",
+        "question23": "string"
+      },
+"form4": {
+    "hypocorticisme": "string",
+    "hyperacth":  "string",
+    "hyperadh":  "string",
+    "hypothyroidie":  "string",
+    "hypoosteogenie":  "string",
+    "hyperfsh":  "string",
+    "gonadiques":  "string",
+    "androgenes":  "string",
+    "hypoandrogenie":  "string",
+    "progesterone":  "string",
+    "hypergh": "string",
+    "prolactine":  "string",
+    "insuline":  "string",
+    "immunitaire":  "string"
+  },
+  "form5":{
+    "GR": "int",
+    "RG": "int",
+    "GB": "int",
+    "RGT": "int"
+
+  }
+}
